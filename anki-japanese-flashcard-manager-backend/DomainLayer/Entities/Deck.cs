@@ -10,5 +10,8 @@ namespace anki_japanese_flashcard_manager_backend.DomainLayer.Entities
 		public int MtimeSecs { get; protected set; }
 		public byte[] Common { get; protected set; }
 		public byte[] Kind { get; protected set; }
+
+		//Navigation Properties
+		public virtual ICollection<Card> Cards { get; protected set; }
 	}
 }

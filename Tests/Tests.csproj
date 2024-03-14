@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
@@ -25,9 +26,40 @@
   <ItemGroup>
     <Folder Include="ApplicationLayer\Helpers\" />
     <Folder Include="ApplicationLayer\Services\Managements\" />
-    <Folder Include="DataAccessLayer\Repositories\" />
-    <Folder Include="TestHelpers\" />
-    <Folder Include="Resources\Anki2 Files\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\anki-japanese-flashcard-manager-backend\anki-japanese-flashcard-manager-backend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Anki2 Files\deck_with_different_card_types.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\emptyLearningKanji_0ivl飲1ivl食欠良5ivl人newKanji_decks.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\emptyLearningKanji_1ivl飲12ivl良monthsIvl食欠人newKanji_decks.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\emptyLearningKanji_飲newKanji_食欠人良resourceKanji_decks.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\empty_kanjiResource_deck.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\empty_kanjiResource_newKanji_decks.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\empty_newKanji_deck.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\empty_random_decks.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Anki2 Files\飲newKanji_食欠人良resourceKanji_decks.anki2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

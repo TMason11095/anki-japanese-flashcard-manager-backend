@@ -12,5 +12,8 @@ namespace anki_japanese_flashcard_manager_backend.DomainLayer.Entities
 		public string Fields { get; protected set; }
 		[Column("sfld")]
 		public string SortField { get; protected set; }
+
+		//Navigation Properties
+		public virtual ICollection<Card> Cards { get; protected set; }
 	}
 }

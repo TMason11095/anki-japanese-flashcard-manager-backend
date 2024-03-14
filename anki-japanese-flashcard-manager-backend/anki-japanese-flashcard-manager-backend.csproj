@@ -13,10 +13,10 @@
     <Folder Include="ApplicationLayer\Helpers\" />
     <Folder Include="ApplicationLayer\Interfaces\Services\Managements\" />
     <Folder Include="ApplicationLayer\Services\Managements\" />
-    <Folder Include="DataAccessLayer\Contexts\" />
-    <Folder Include="DataAccessLayer\Helpers\" />
-    <Folder Include="DataAccessLayer\Interfaces\Contexts\" />
-    <Folder Include="DataAccessLayer\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.3" />
   </ItemGroup>
 
 </Project>

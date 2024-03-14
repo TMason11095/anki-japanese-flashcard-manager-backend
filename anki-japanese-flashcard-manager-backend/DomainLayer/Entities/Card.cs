@@ -12,6 +12,10 @@ namespace anki_japanese_flashcard_manager_backend.DomainLayer.Entities
 		[Column("ivl")]
 		public int Interval { get; protected set; }
 
+		//Navigation Properties
+		public virtual Deck Deck { get; protected set; }
+		public virtual Note Note { get; protected set; }
+
 		//Override Equals
 		public override bool Equals(object obj)
 		{
