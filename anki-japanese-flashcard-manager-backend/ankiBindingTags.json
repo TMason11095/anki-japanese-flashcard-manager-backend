@@ -1,0 +1,19 @@
+{
+	"deckTag": "deck:",
+	"resourceDecks": {
+		"kanji": "KanjiResource"
+	},
+	"newDecks": {
+		"kanji": "NewKanji"
+	},
+	"learningDecks": {
+		"kanji": "LearningKanji"
+	},
+	"noteTags": {
+		"kanjiId": "kid:",
+		"subKanjiId": "skid:"
+	},
+	"noteIntervalLimits": {
+		"moveFromNewKanji": 7
+	}
+}
