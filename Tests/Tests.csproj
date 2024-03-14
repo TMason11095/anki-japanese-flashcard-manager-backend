@@ -22,4 +22,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ApplicationLayer\Helpers\" />
+    <Folder Include="ApplicationLayer\Services\Managements\" />
+    <Folder Include="DataAccessLayer\Repositories\" />
+    <Folder Include="TestHelpers\" />
+    <Folder Include="Resources\Anki2 Files\" />
+  </ItemGroup>
+
 </Project>
