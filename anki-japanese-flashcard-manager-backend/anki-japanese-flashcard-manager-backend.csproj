@@ -8,15 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ApplicationLayer\Config\" />
-    <Folder Include="ApplicationLayer\DTOs\Config\" />
-    <Folder Include="ApplicationLayer\Helpers\" />
-    <Folder Include="ApplicationLayer\Interfaces\Services\Managements\" />
-    <Folder Include="ApplicationLayer\Services\Managements\" />
+    <None Remove="ankiBindingTags.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ankiBindingTags.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

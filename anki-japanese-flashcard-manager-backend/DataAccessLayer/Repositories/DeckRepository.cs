@@ -1,11 +1,6 @@
 ﻿using anki_japanese_flashcard_manager_backend.DataAccessLayer.Interfaces.Contexts;
 using anki_japanese_flashcard_manager_backend.DomainLayer.Entities;
 using anki_japanese_flashcard_manager_backend.DomainLayer.Interfaces.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace anki_japanese_flashcard_manager_backend.DataAccessLayer.Repositories
 {

@@ -1,4 +1,6 @@
-﻿using anki_japanese_flashcard_manager_backend.DataAccessLayer.Contexts;
+﻿using anki_japanese_flashcard_manager_backend.ApplicationLayer.Services;
+using anki_japanese_flashcard_manager_backend.ApplicationLayer.Services.Managements;
+using anki_japanese_flashcard_manager_backend.DataAccessLayer.Contexts;
 using anki_japanese_flashcard_manager_backend.DataAccessLayer.Helpers;
 using anki_japanese_flashcard_manager_backend.DataAccessLayer.Repositories;
 using anki_japanese_flashcard_manager_backend.DomainLayer.Entities;
@@ -31,40 +33,40 @@ namespace Tests.TestHelpers
 			private set { _cardRepository = value; }
 		}
 
-		//private DeckService _deckService;
-		//public DeckService DeckService
-		//{
-		//	get { return SingletonObject(ref _deckService, () => new DeckService(this.DeckRepository)); }
-		//	private set { _deckService = value; }
-		//}
+		private DeckService _deckService;
+		public DeckService DeckService
+		{
+			get { return SingletonObject(ref _deckService, () => new DeckService(this.DeckRepository)); }
+			private set { _deckService = value; }
+		}
 
-		//private KanjiDeckService _kanjiDeckService;
-		//public KanjiDeckService KanjiDeckService
-		//{
-		//	get { return SingletonObject(ref _kanjiDeckService, () => new KanjiDeckService(this.DeckService)); }
-		//	private set { _kanjiDeckService = value; }
-		//}
+		private KanjiDeckService _kanjiDeckService;
+		public KanjiDeckService KanjiDeckService
+		{
+			get { return SingletonObject(ref _kanjiDeckService, () => new KanjiDeckService(this.DeckService)); }
+			private set { _kanjiDeckService = value; }
+		}
 
-		//private KanjiCardService _kanjiCardService;
-		//public KanjiCardService KanjiCardService
-		//{
-		//	get { return SingletonObject(ref _kanjiCardService, () => new KanjiCardService(this.CardRepository)); }
-		//	private set { _kanjiCardService = value; }
-		//}
+		private KanjiCardService _kanjiCardService;
+		public KanjiCardService KanjiCardService
+		{
+			get { return SingletonObject(ref _kanjiCardService, () => new KanjiCardService(this.CardRepository)); }
+			private set { _kanjiCardService = value; }
+		}
 
-		//private KanjiNoteService _kanjiNoteService;
-		//public KanjiNoteService KanjiNoteService
-		//{
-		//	get { return SingletonObject(ref _kanjiNoteService, () => new KanjiNoteService()); }
-		//	private set { _kanjiNoteService = value; }
-		//}
+		private KanjiNoteService _kanjiNoteService;
+		public KanjiNoteService KanjiNoteService
+		{
+			get { return SingletonObject(ref _kanjiNoteService, () => new KanjiNoteService()); }
+			private set { _kanjiNoteService = value; }
+		}
 
-		//private KanjiServiceManagement _kanjiServiceManagement;
-		//public KanjiServiceManagement KanjiServiceManagement
-		//{
-		//	get { return SingletonObject(ref _kanjiServiceManagement, () => new KanjiServiceManagement(this.KanjiDeckService, this.KanjiNoteService, this.KanjiCardService, this.CardRepository)); }
-		//	private set { _kanjiServiceManagement = value; }
-		//}
+		private KanjiServiceManagement _kanjiServiceManagement;
+		public KanjiServiceManagement KanjiServiceManagement
+		{
+			get { return SingletonObject(ref _kanjiServiceManagement, () => new KanjiServiceManagement(this.KanjiDeckService, this.KanjiNoteService, this.KanjiCardService, this.CardRepository)); }
+			private set { _kanjiServiceManagement = value; }
+		}
 
 		private T SingletonObject<T>(ref T singletonObject, Func<T> constructor)
 			where T : class

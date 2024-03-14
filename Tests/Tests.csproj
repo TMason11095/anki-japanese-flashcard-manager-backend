@@ -24,11 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ApplicationLayer\Helpers\" />
-    <Folder Include="ApplicationLayer\Services\Managements\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\anki-japanese-flashcard-manager-backend\anki-japanese-flashcard-manager-backend.csproj" />
   </ItemGroup>
 
