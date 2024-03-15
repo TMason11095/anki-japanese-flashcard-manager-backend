@@ -12,10 +12,10 @@ namespace anki_japanese_flashcard_manager_backend.Composition
 {
 	public static class CompositionRoot
 	{
-		public static void Compose(IServiceCollection services)
+		public static void Compose(IServiceCollection services, string dbPath)
 		{
 			//Register the Data Access Layer
-			services.AddScoped<IAnki2Context, Anki2Context>();
+			services.AddScoped<IAnki2Context, Anki2Context>(provider => new Anki2Context(dbPath));
 			services.AddScoped<ICardRepository, CardRepository>();
 			services.AddScoped<IDeckRepository, DeckRepository>();
 			//Register the Application Layer
