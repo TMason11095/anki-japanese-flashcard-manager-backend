@@ -9,8 +9,8 @@ namespace anki_japanese_flashcard_manager_backend.ApplicationLayer.Config
 
 		static AnkiBindingConfig()
 		{
-			//Get the bindings JSON data
-			string jsonFilePath = "ankiBindingTags.json";
+			//Get the bindings JSON data (search all subdirectories as it'll move if used as a submodule)
+			string jsonFilePath = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "ankiBindingTags.json", SearchOption.AllDirectories).FirstOrDefault();
 			string json = File.ReadAllText(jsonFilePath);
 			//Setup the settings to ignore any extra properties
 			JsonSerializerSettings settings = new JsonSerializerSettings
